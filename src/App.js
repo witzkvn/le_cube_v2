@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./components/Navbar";
-import HomePage from "./pages/HomePage";
-import WhyPage from "./pages/WhyPage";
-import HowPage from "./pages/HowPage";
-import ActPage from "./pages/ActPage";
-import VeggieChallengePage from "./pages/VeggieChallengePage";
-import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/mainPages/HomePage";
+import WhyPage from "./pages/mainPages/WhyPage";
+import HowPage from "./pages/mainPages/HowPage";
+import ActPage from "./pages/mainPages/ActPage";
+import VeggieChallengePage from "./pages/mainPages/VeggieChallengePage";
+import ContactPage from "./pages/mainPages/ContactPage";
+import VideosPage from "./pages/VideosPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/agir" element={<ActPage />} />
             <Route path="/veggie-challenge" element={<VeggieChallengePage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/videos" element={<VideosPage />} />
           </Routes>
         </div>
       </BrowserRouter>

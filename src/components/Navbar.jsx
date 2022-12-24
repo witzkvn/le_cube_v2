@@ -12,7 +12,6 @@ import CustomButton from "./CustomButton";
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
   const location = useLocation();
-  console.log("🚀 ~ file: Navbar.jsx:15 ~ Nav ~ location", location);
 
   useEffect(() => {
     window.addEventListener(

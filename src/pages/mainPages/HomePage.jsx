@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderImage from "../assets/header_sm.jpg";
+import HeaderImage from "../../assets/header_sm.jpg";
 
 const HomePage = () => {
   return (
@@ -11,9 +11,9 @@ const HomePage = () => {
             Manger des animaux, se vêtir de leur peau ou de leur fourrure, se
             distraire grâce à eux, c'est les faire souffrir, les tuer pour votre
             seul intérêt.
-            <div className="mt-4 font-bold text-lg">
+            <span className="mt-4 font-bold text-lg block">
               Refuser de les exploiter est un acte de justice.
-            </div>
+            </span>
           </p>
         </div>
         <div className="h-full w-96 shrink-0 ml-auto">
