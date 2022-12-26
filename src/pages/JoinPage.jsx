@@ -19,8 +19,10 @@ const JoinPage = () => {
         <p className="mb-4">
           Il existe des antennes{" "}
           <a
+            target="_blank"
             className="underline"
             href="https://www.anonymousforthevoiceless.org/"
+            rel="noreferrer"
           >
             d'Anonymous for the Voiceless
           </a>{" "}

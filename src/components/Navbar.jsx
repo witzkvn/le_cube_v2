@@ -3,7 +3,6 @@ import {
   Navbar,
   MobileNav,
   Typography,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
 import { NavLink, useLocation } from "react-router-dom";
@@ -77,8 +76,8 @@ const Nav = () => {
   );
 
   return (
-    <Navbar className="mx-auto max-w-full rounded-none py-2 px-4 bg-black bg-opacity-100 border-none sticky top-0 left-0 lg:px-8 lg:py-4">
-      <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+    <Navbar className="mx-auto max-w-full rounded-none py-2 px-4 bg-black bg-opacity-100 border-none sticky top-0 left-0 z-10  lg:px-8 lg:py-4">
+      <div className="container max-w-full flex items-center justify-between text-blue-gray-900">
         <NavLink
           to={"/"}
           className="mr-4 cursor-pointer py-1.5 text-white"
@@ -137,9 +136,9 @@ const Nav = () => {
       <MobileNav open={openNav}>
         {navList}
         <NavLink to={"/contact"} onClick={() => setOpenNav(false)}>
-          <Button size="md" fullWidth className="mb-2">
-            <span>Contact</span>
-          </Button>
+          <CustomButton customClasses={"!block text-center"}>
+            Contact
+          </CustomButton>
         </NavLink>
       </MobileNav>
     </Navbar>

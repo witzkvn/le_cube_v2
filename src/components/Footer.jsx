@@ -11,17 +11,17 @@ const Footer = () => {
           <p className="mb-6">
             Nous sommes militants bénévoles pour l'association{" "}
             <a
+              target="_blank"
               className="underline"
               href="https://www.anonymousforthevoiceless.org/"
+              rel="noreferrer"
             >
               Anonymous for the Voiceless
             </a>{" "}
             qui possède des antennes partout dans le monde. Aidez les animaux en
             venant militer à nos côtés lors des cubes de la vérité.
           </p>
-          <CustomButton>
-            <Link to="/rejoindre">Rejoindre le mouvement</Link>
-          </CustomButton>
+          <CustomButton to="/rejoindre">Rejoindre le mouvement</CustomButton>
         </div>
         <div>
           <h4 className="text-xl uppercase font-bold mb-6">Liens du site</h4>
