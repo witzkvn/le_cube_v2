@@ -68,7 +68,7 @@ const HomePage = () => {
               </div>
             </CardLayout>
           </Link>
-          <Link to="/agir">
+          <Link to="/rejoindre">
             <CardLayout>
               <div className="h-52 overflow-hidden">
                 <img

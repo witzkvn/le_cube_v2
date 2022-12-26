@@ -12,6 +12,11 @@ import LegalPage from "./pages/LegalPage";
 import ScrollToTop from "./helpers/ScrollToTop";
 import AnimalsInfos from "./pages/AnimalsInfos";
 import StopExploitationPage from "./pages/StopExploitationPage";
+import AlimentationPage from "./pages/howPages/AlimentationPage";
+import CookingPage from "./pages/howPages/CookingPage";
+import SportPage from "./pages/howPages/SportPage";
+import LifePage from "./pages/howPages/LifePage";
+import TipsPage from "./pages/howPages/TipsPage";
 
 function App() {
   return (
@@ -36,6 +41,11 @@ function App() {
                 element={<StopExploitationPage />}
               />
               <Route path="/rejoindre" element={<JoinPage />} />
+              <Route path="/alimentation" element={<AlimentationPage />} />
+              <Route path="/cuisine" element={<CookingPage />} />
+              <Route path="/sport" element={<SportPage />} />
+              <Route path="/sante" element={<LifePage />} />
+              <Route path="/conseils" element={<TipsPage />} />
               <Route path="/mentions-legales" element={<LegalPage />} />
             </Routes>
           </ScrollToTop>

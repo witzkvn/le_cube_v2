@@ -63,7 +63,7 @@ const Footer = () => {
                 </li>
                 <li className="mb-3">
                   <Link to="/vie-des-animaux" className="hover:text-orange-600">
-                    Leur vie avant notre assiette
+                    Infos animaux
                   </Link>
                 </li>
                 <li className="mb-3">
@@ -71,42 +71,38 @@ const Footer = () => {
                     to="/arreter-exploitation-des-animaux"
                     className="hover:text-orange-600"
                   >
-                    Ne plus exploiter les animaux
+                    Stop Exploitation
                   </Link>
                 </li>
                 <li className="mb-3">
-                  <a href="#!" className="text-gray-800">
-                    Link 4
-                  </a>
+                  <Link to="/alimentation" className="hover:text-orange-600">
+                    Alimentation
+                  </Link>
                 </li>
               </ul>
             </div>
 
             <div className="mb-6">
-              <h5 className="uppercase font-bold mb-2.5 text-gray-800">
-                Links
-              </h5>
-
               <ul className="list-none mb-0">
-                <li>
-                  <a href="#!" className="text-gray-800">
-                    Link 1
-                  </a>
+                <li className="mb-3">
+                  <Link to="/cuisine" className="hover:text-orange-600">
+                    Cuisine
+                  </Link>
                 </li>
-                <li>
-                  <a href="#!" className="text-gray-800">
-                    Link 2
-                  </a>
+                <li className="mb-3">
+                  <Link to="/sport" className="hover:text-orange-600">
+                    Sport
+                  </Link>
                 </li>
-                <li>
-                  <a href="#!" className="text-gray-800">
-                    Link 3
-                  </a>
+                <li className="mb-3">
+                  <Link to="/sante" className="hover:text-orange-600">
+                    Santé
+                  </Link>
                 </li>
-                <li>
-                  <a href="#!" className="text-gray-800">
-                    Link 4
-                  </a>
+                <li className="mb-3">
+                  <Link to="/conseils" className="hover:text-orange-600">
+                    Conseils Pratiques
+                  </Link>
                 </li>
               </ul>
             </div>
