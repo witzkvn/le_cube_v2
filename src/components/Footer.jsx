@@ -61,17 +61,20 @@ const Footer = () => {
                     Films et vidéos
                   </Link>
                 </li>
-                <li>
+                <li className="mb-3">
                   <Link to="/vie-des-animaux" className="hover:text-orange-600">
                     Leur vie avant notre assiette
                   </Link>
                 </li>
-                <li>
-                  <a href="#!" className="text-gray-800">
-                    Link 3
-                  </a>
+                <li className="mb-3">
+                  <Link
+                    to="/arreter-exploitation-des-animaux"
+                    className="hover:text-orange-600"
+                  >
+                    Ne plus exploiter les animaux
+                  </Link>
                 </li>
-                <li>
+                <li className="mb-3">
                   <a href="#!" className="text-gray-800">
                     Link 4
                   </a>
