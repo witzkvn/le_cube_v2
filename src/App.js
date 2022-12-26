@@ -7,13 +7,16 @@ import ActPage from "./pages/mainPages/ActPage";
 import VeggieChallengePage from "./pages/mainPages/VeggieChallengePage";
 import ContactPage from "./pages/mainPages/ContactPage";
 import VideosPage from "./pages/VideosPage";
+import Footer from "./components/Footer";
+import JoinPage from "./pages/JoinPage";
+import LegalPage from "./pages/LegalPage";
 
 function App() {
   return (
-    <div className="bg-black min-h-screen text-white">
+    <div className="min-h-screen">
       <BrowserRouter>
         <Nav />
-        <div className="p-6 mx-auto xl:max-w-screen-xl">
+        <div className="">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/pourquoi" element={<WhyPage />} />
@@ -22,8 +25,11 @@ function App() {
             <Route path="/veggie-challenge" element={<VeggieChallengePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/videos" element={<VideosPage />} />
+            <Route path="/rejoindre" element={<JoinPage />} />
+            <Route path="/mentions-legales" element={<LegalPage />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );

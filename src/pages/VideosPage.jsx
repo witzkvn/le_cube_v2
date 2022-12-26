@@ -46,23 +46,23 @@ const VideosPage = () => {
       {videos &&
         videos.map((vid) => (
           <div key={vid.sys.id} className="mb-12">
-            {vid.fields.videoUrl ? (
-              <a
-                href={vid.fields.videoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="text-2xl text-blue-600 mb-2 block"
-              >
-                {vid.fields.titre}
-              </a>
-            ) : (
-              <p className="text-2xl text-blue-600 mb-2 block">
-                {vid.fields.titre}
-              </p>
-            )}
             <div className="flex">
               <VideoPreview url={vid.fields.videoUrl} />
               <div className="ml-4">
+                {vid.fields.videoUrl ? (
+                  <a
+                    href={vid.fields.videoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-2xl text-blue-600 mb-2 block"
+                  >
+                    {vid.fields.titre}
+                  </a>
+                ) : (
+                  <p className="text-2xl text-blue-600 mb-2 block">
+                    {vid.fields.titre}
+                  </p>
+                )}
                 <p className="mb-6">{vid.fields.description}</p>
                 {vid.fields.videoUrl && (
                   <p>

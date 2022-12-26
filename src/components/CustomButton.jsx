@@ -2,7 +2,7 @@ import React from "react";
 
 const CustomButton = ({ children }) => {
   return (
-    <div className="bg-black text-white py-3 px-6 rounded-md hover:bg-black/80">
+    <div className="border border-white text-white uppercase font-bold py-2 px-6 rounded-md hover:bg-white hover:text-black">
       {children}
     </div>
   );
