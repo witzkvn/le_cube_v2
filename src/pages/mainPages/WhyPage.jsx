@@ -26,7 +26,7 @@ const WhyPage = () => {
             <div className="h-52 overflow-hidden">
               <img
                 src={PourquoiImage}
-                alt="Agir"
+                alt="Films & Enquêtes"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -45,7 +45,7 @@ const WhyPage = () => {
             <div className="h-52 overflow-hidden">
               <img
                 src={ElevageImage}
-                alt="Agir"
+                alt="Que se passe-t-il dans les élevages ?"
                 className="h-full w-full object-cover"
               />
             </div>

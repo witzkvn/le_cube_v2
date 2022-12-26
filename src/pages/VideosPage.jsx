@@ -6,28 +6,29 @@ import client from "../services/contentfulClient";
 const VideosPage = () => {
   const [videos, setVideos] = useState();
   const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   const getVideos = async () => {
     setError(false);
     try {
-      const videos = await client.getEntries("videoPage");
+      const videos = await client.getEntries({
+        content_type: "videoPage",
+        order: "sys.createdAt",
+      });
       setVideos(videos.items);
-      console.log("🚀 ~ file: videosPage.jsx:8 ~ getVideos ~ videos", videos);
     } catch (error) {
-      console.log("🚀 ~ file: videosPage.jsx:8 ~ getVideos ~ error", error);
       setError(true);
     }
   };
 
   useEffect(() => {
-    console.log(
-      process.env.REACT_APP_CONTENTFUL_AT,
-      process.env.REACT_APP_CONTENTFUL_SPACEID
-    );
-    getVideos();
-    console.log(client);
+    setIsLoading(true);
+    getVideos().then(() => setIsLoading(false));
   }, []);
 
-  if (error)
+  if (isLoading) return <div>Chargement...</div>;
+
+  if (!isLoading && error)
     return (
       <div>Une erreur est survenue dans la récupérations des informations.</div>
     );
