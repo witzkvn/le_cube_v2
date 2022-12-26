@@ -11,6 +11,8 @@ import Footer from "./components/Footer";
 import JoinPage from "./pages/JoinPage";
 import LegalPage from "./pages/LegalPage";
 import ScrollToTop from "./helpers/ScrollToTop";
+import AnimalsInfos from "./pages/AnimalsInfos";
+import StopExploitationPage from "./pages/StopExploitationPage";
 
 function App() {
   return (
@@ -30,6 +32,11 @@ function App() {
               />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/videos" element={<VideosPage />} />
+              <Route path="/vie-des-animaux" element={<AnimalsInfos />} />
+              <Route
+                path="/arreter-exploitation-des-animaux"
+                element={<StopExploitationPage />}
+              />
               <Route path="/rejoindre" element={<JoinPage />} />
               <Route path="/mentions-legales" element={<LegalPage />} />
             </Routes>

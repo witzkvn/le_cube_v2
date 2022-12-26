@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import VideoPreview from "../components/VideoPreview";
+import PageMainLayout from "../layout/PageMainLayout";
 import client from "../services/contentfulClient";
 
 const VideosPage = () => {
@@ -32,23 +33,25 @@ const VideosPage = () => {
     );
 
   return (
-    <main>
-      <h1 className="font-oswald text-4xl text-center mb-6">Films & Vidéos</h1>
-      <p>
-        Les animaux sont des individus sensibles, ils ressentent la peur, la
-        douleur et le plaisir.
-      </p>
-      <p className="mb-12">
-        Ils éprouvent des émotions, ont des désirs, et leur vie compte pour eux.
-        Ils sont pourtant traités comme des marchandises, entassés dans des
-        élevages et tués à la chaine.
-      </p>
+    <PageMainLayout>
+      <div className="text-center">
+        <h1 className="font-oswald text-4xl mb-6">Films & Vidéos</h1>
+        <p>
+          Les animaux sont des individus sensibles, ils ressentent la peur, la
+          douleur et le plaisir.
+        </p>
+        <p className="mb-12">
+          Ils éprouvent des émotions, ont des désirs, et leur vie compte pour
+          eux. Ils sont pourtant traités comme des marchandises, entassés dans
+          des élevages et tués à la chaine.
+        </p>
+      </div>
       {videos &&
         videos.map((vid) => (
-          <div key={vid.sys.id} className="mb-12">
-            <div className="flex">
+          <div key={vid.sys.id} className="mb-16">
+            <div className="flex flex-col items-center lg:flex-row lg:items-start">
               <VideoPreview url={vid.fields.videoUrl} />
-              <div className="ml-4">
+              <div className="w-full sm:w-[560px] mt-4 lg:mt-0 lg:ml-4 lg:w-auto">
                 {vid.fields.videoUrl ? (
                   <a
                     href={vid.fields.videoUrl}
@@ -81,7 +84,7 @@ const VideosPage = () => {
             </div>
           </div>
         ))}
-    </main>
+    </PageMainLayout>
   );
 };
 

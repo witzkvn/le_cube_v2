@@ -1,13 +1,11 @@
 import React from "react";
 
 const VideoPreview = ({ url }) => {
-  // "https://www.youtube.com/embed/kxMBrqDvFhE"
   if (url.includes("youtube.com")) {
     return (
-      <div className="w-[560px] h-[315px]">
+      <div className="w-full">
         <iframe
-          width="560"
-          height="315"
+          className="w-full mx-auto min-h-[250px] sm:w-[560px] sm:h-[315px]"
           src={url.replace("watch?v=", "embed/")}
           title="YouTube video player"
           frameborder="0"
@@ -17,7 +15,16 @@ const VideoPreview = ({ url }) => {
       </div>
     );
   }
-  return <a href={url}>url</a>;
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noreferrer"
+      className="underline underline-offset-8"
+    >
+      {url}
+    </a>
+  );
 };
 
 export default VideoPreview;

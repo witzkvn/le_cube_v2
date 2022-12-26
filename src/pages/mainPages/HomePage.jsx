@@ -7,6 +7,7 @@ import AgirImage from "../../assets/act/act_main.jpg";
 import CustomButton from "../../components/CustomButton";
 import CardLayout from "../../layout/CardLayout";
 import PageMainLayout from "../../layout/PageMainLayout";
+import GridSectionWrapper from "../../layout/GridSectionWrapper";
 
 const HomePage = () => {
   return (
@@ -28,7 +29,7 @@ const HomePage = () => {
         </div>
       </header>
       <PageMainLayout>
-        <section className="grid grid-col-1 gap-12 max-w-max mx-auto mb-24 lg:grid-cols-2 2xl:grid-cols-3">
+        <GridSectionWrapper>
           <Link to="/pourquoi">
             <CardLayout>
               <div className="h-52 overflow-hidden">
@@ -86,7 +87,7 @@ const HomePage = () => {
               </div>
             </CardLayout>
           </Link>
-        </section>
+        </GridSectionWrapper>
         <section className="text-center">
           <h2 className="text-4xl mb-6 uppercase font-bold">Nos actions</h2>
           <p className="mb-6">
