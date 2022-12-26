@@ -56,7 +56,7 @@ const Nav = () => {
         className="p-1 font-normal text-white hover:text-orange-600"
         onClick={() => setOpenNav(false)}
       >
-        <NavLink to={"/agir"} className={`${getActiveLinkClass("/agir")}`}>
+        <NavLink to={"/rejoindre"} className={`${getActiveLinkClass("/agir")}`}>
           Agir
         </NavLink>
       </Typography>
