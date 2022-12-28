@@ -1,7 +1,8 @@
 import React from "react";
+import isYoutubeLink from "../helpers/utils/isYoutubeLink";
 
 const VideoPreview = ({ url }) => {
-  if (url.includes("youtube.com")) {
+  if (isYoutubeLink(url)) {
     return (
       <div className="w-full">
         <iframe

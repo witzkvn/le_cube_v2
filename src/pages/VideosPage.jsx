@@ -36,7 +36,7 @@ const VideosPage = () => {
   return (
     <PageMainLayout>
       <div className="text-center">
-        <h1 className="font-oswald text-4xl mb-6">Films & Vidéos</h1>
+        <h1 className="font-oswald text-4xl mb-24">Films & Vidéos</h1>
         <p>
           Les animaux sont des individus sensibles, ils ressentent la peur, la
           douleur et le plaisir.
