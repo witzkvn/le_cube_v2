@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Loader from "../../components/Loader";
 import VideoPreview from "../../components/VideoPreview";
 import isYoutubeLink from "../../helpers/utils/isYoutubeLink";
 import PageMainLayout from "../../layout/PageMainLayout";
@@ -27,11 +28,32 @@ const TipsPage = () => {
     getLinks().then(() => setIsLoading(false));
   }, []);
 
-  if (isLoading) return <div>Chargement...</div>;
+  if (isLoading)
+    return (
+      <PageMainLayout customClasses={"flex justify-center min-h-screen"}>
+        <Loader />
+      </PageMainLayout>
+    );
 
   if (!isLoading && error)
     return (
-      <div>Une erreur est survenue dans la récupérations des informations.</div>
+      <PageMainLayout customClasses={"flex justify-center min-h-screen"}>
+        <div className="font-bold text-red-800 text-center">
+          Une erreur est survenue dans la récupérations des informations.
+          <br />
+          Merci de recharger la page ou de signaler le problème
+          <br />
+          <a
+            href="mailto:witz.kevin05@gmail.com?subject=Signalement%20d'un%20bug%20sur%20le-cube.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open a test email in your default mail client"
+          >
+            {" "}
+            en cliquant ici.
+          </a>
+        </div>
+      </PageMainLayout>
     );
 
   const LinkCardItem = ({ link }) => (
