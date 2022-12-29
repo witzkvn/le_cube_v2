@@ -10,6 +10,47 @@ import LifeImage from "../../assets/how/etres-humains4.jpeg";
 import VeggieChallengeImage from "../../assets/how/veggie-chalenge.jpg";
 import TipsImage from "../../assets/how/environnement-3.jpg";
 
+const cards = [
+  {
+    pathTo: "/alimentation",
+    image: AlimentationImage,
+    title: "Besoins alimentaires",
+    subTitle: "Protéines, vitamines, nutriments, sans manger d'animaux.",
+  },
+  {
+    pathTo: "/cuisine",
+    image: CuisineImage,
+    title: "Cuisiner végétal",
+    subTitle:
+      "Une cuisine délicieuse, riche, colorée. Comment la préparer ? Inclus des recettes petits budgets !",
+  },
+  {
+    pathTo: "/sport",
+    image: SportImage,
+    title: "Sport et végétalisme",
+    subTitle: "Un duo gagnant !",
+  },
+  {
+    pathTo: "/sante",
+    image: LifeImage,
+    title: "Pour tous les âges",
+    subTitle: "Enfants, adultes, séniors.",
+  },
+  {
+    pathTo: "/veggie-challenge",
+    image: VeggieChallengeImage,
+    title: "Le Veggie Challenge",
+    subTitle:
+      "Vous accompagner dans votre transition vers une cuisine végétale.",
+  },
+  {
+    pathTo: "/conseils",
+    image: TipsImage,
+    title: "Conseils pratiques",
+    subTitle: "Vivre sans les exploiter.",
+  },
+];
+
 const HowPage = () => {
   return (
     <PageMainLayout>
@@ -26,122 +67,28 @@ const HowPage = () => {
         </p>
       </div>
       <GridSectionWrapper>
-        <Link to="/alimentation">
-          <CardLayout>
-            <div className="h-52 overflow-hidden">
-              <img
-                src={AlimentationImage}
-                alt="Besoins alimentaires"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h2>
-                <span className="block uppercase font-bold text-3xl">
-                  Besoins alimentaires
-                </span>
-                Protéines, vitamines, nutriments, sans manger d'animaux.
-              </h2>
-            </div>
-          </CardLayout>
-        </Link>
-        <Link to="/cuisine">
-          <CardLayout>
-            <div className="h-52 overflow-hidden">
-              <img
-                src={CuisineImage}
-                alt="Cuisiner végétal"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h2>
-                <span className="block uppercase font-bold text-3xl">
-                  Cuisiner végétal
-                </span>
-                Une cuisine délicieuse, riche, colorée. Comment la préparer ?
-                Inclus des recettes petits budgets !
-              </h2>
-            </div>
-          </CardLayout>
-        </Link>
-        <Link to="/sport">
-          <CardLayout>
-            <div className="h-52 overflow-hidden">
-              <img
-                src={SportImage}
-                alt="Sport et végétalisme"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h2>
-                <span className="block uppercase font-bold text-3xl">
-                  Sport et végétalisme
-                </span>
-                Un duo gagnant !
-              </h2>
-            </div>
-          </CardLayout>
-        </Link>
-        <Link to="/sante">
-          <CardLayout>
-            <div className="h-52 overflow-hidden">
-              <img
-                src={LifeImage}
-                alt="Pour tous les âges"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h2>
-                <span className="block uppercase font-bold text-3xl">
-                  Pour tous les âges
-                </span>
-                Enfants, adultes, séniors.
-              </h2>
-            </div>
-          </CardLayout>
-        </Link>
-        <Link to="/veggie-challenge">
-          <CardLayout>
-            <div className="h-52 overflow-hidden">
-              <img
-                src={VeggieChallengeImage}
-                alt="Veggie Challenge"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h2>
-                <span className="block uppercase font-bold text-3xl">
-                  Le Veggie Challenge
-                </span>
-                Vous accompagner dans votre transition vers une cuisine
-                végétale.
-              </h2>
-            </div>
-          </CardLayout>
-        </Link>
-        <Link to="/conseils">
-          <CardLayout>
-            <div className="h-52 overflow-hidden">
-              <img
-                src={TipsImage}
-                alt="Conseils pratiques"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h2>
-                <span className="block uppercase font-bold text-3xl">
-                  Conseils pratiques
-                </span>
-                Vivre sans les exploiter.
-              </h2>
-            </div>
-          </CardLayout>
-        </Link>
+        {cards &&
+          cards.map((card) => (
+            <Link to={card.pathTo}>
+              <CardLayout>
+                <div className="h-52 overflow-hidden">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h2>
+                    <span className="block uppercase font-bold text-3xl">
+                      {card.title}
+                    </span>
+                    {card.subTitle}
+                  </h2>
+                </div>
+              </CardLayout>
+            </Link>
+          ))}
       </GridSectionWrapper>
     </PageMainLayout>
   );
