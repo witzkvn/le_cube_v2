@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from "react";
-import Loader from "../../components/Loader";
-import VideoPreview from "../../components/VideoPreview";
-import isYoutubeLink from "../../helpers/utils/isYoutubeLink";
-import PageMainLayout from "../../layout/PageMainLayout";
-import client from "../../services/contentfulClient";
+import React, { useCallback, useEffect, useState } from "react";
+import Loader from "../components/Loader";
+import VideoPreview from "../components/VideoPreview";
+import isYoutubeLink from "../helpers/utils/isYoutubeLink";
+import PageMainLayout from "../layout/PageMainLayout";
+import client from "../services/contentfulClient";
 
-const LifePage = () => {
+const LinksPage = ({ title, fetchId, description }) => {
   const [links, setLinks] = useState();
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const getLinks = async () => {
+  const getLinks = useCallback(async () => {
     setError(false);
     try {
       const links = await client.getEntries({
-        content_type: "health",
+        content_type: fetchId,
         order: "sys.createdAt",
       });
       setLinks(links.items);
     } catch (error) {
       setError(true);
     }
-  };
+  }, [fetchId]);
 
   useEffect(() => {
     setIsLoading(true);
     getLinks().then(() => setIsLoading(false));
-  }, []);
+  }, [getLinks]);
 
   if (isLoading)
     return (
@@ -55,7 +55,6 @@ const LifePage = () => {
         </div>
       </PageMainLayout>
     );
-
   const LinkCardItem = ({ link }) => (
     <div key={link.sys.id} className="mb-16">
       <div className="flex flex-col items-center lg:flex-row lg:items-start">
@@ -68,7 +67,7 @@ const LifePage = () => {
             <img
               className="w-full object-contain min-h-[250px] sm:w-[560px] sm:h-[315px]"
               src={`https:${link.fields.image?.fields.file.url}`}
-              alt="Besoins alimentaires"
+              alt={title}
             />
           )
         )}
@@ -140,9 +139,8 @@ const LifePage = () => {
   return (
     <PageMainLayout>
       <div className="text-center">
-        <h1 className="font-oswald text-4xl mb-24">
-          Une alimentation adaptée pour tous
-        </h1>
+        <h1 className="font-oswald text-4xl mb-24">{title}</h1>
+        {description && description}
       </div>
       {links &&
         links.map((link) => {
@@ -160,4 +158,4 @@ const LifePage = () => {
   );
 };
 
-export default LifePage;
+export default LinksPage;
