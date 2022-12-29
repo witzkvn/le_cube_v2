@@ -76,7 +76,7 @@ const Nav = () => {
   );
 
   return (
-    <Navbar className="mx-auto max-w-full rounded-none py-2 px-4 bg-black bg-opacity-100 border-none sticky top-0 left-0 z-10  lg:px-8 lg:py-4">
+    <Navbar className="mx-auto max-w-full rounded-none py-2 px-4 bg-black bg-opacity-100 border-none sticky top-0 left-0 z-50 lg:px-8 lg:py-4">
       <div className="container max-w-full flex items-center justify-between text-blue-gray-900">
         <NavLink
           to={"/"}

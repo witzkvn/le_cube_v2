@@ -1,13 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import HeaderImage from "../../assets/home/home_header.jpg";
 import PourquoiImage from "../../assets/why/why_main.jpg";
 import CommentImage from "../../assets/how/how_main.jpg";
 import AgirImage from "../../assets/act/act_main.jpg";
-import CustomButton from "../../components/CustomButton";
-import CardLayout from "../../layout/CardLayout";
-import PageMainLayout from "../../layout/PageMainLayout";
-import GridSectionWrapper from "../../layout/GridSectionWrapper";
+import HomeCard from "../../components/HomeCard";
 
 const HomePage = () => {
   return (
@@ -28,90 +24,62 @@ const HomePage = () => {
           <img src={HeaderImage} alt="le cube de la vérité" />
         </div>
       </header>
-      <PageMainLayout>
-        <GridSectionWrapper>
-          <Link to="/pourquoi">
-            <CardLayout>
-              <div className="h-52 overflow-hidden">
-                <img
-                  src={PourquoiImage}
-                  alt="Pourquoi"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h2>
-                  <span className="block uppercase font-bold text-3xl">
-                    Pourquoi
-                  </span>
-                  arrêter d'exploiter les animaux ?
-                </h2>
-              </div>
-            </CardLayout>
-          </Link>
-          <Link to="/comment">
-            <CardLayout>
-              <div className="h-52 overflow-hidden">
-                <img
-                  src={CommentImage}
-                  alt="Comment"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h2>
-                  <span className="block uppercase font-bold text-3xl">
-                    Comment
-                  </span>
-                  ne plus exploiter les animaux ?
-                </h2>
-              </div>
-            </CardLayout>
-          </Link>
-          <Link to="/rejoindre">
-            <CardLayout>
-              <div className="h-52 overflow-hidden">
-                <img
-                  src={AgirImage}
-                  alt="Agir"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h2>
-                  <span className="block uppercase font-bold text-3xl">
-                    Agir
-                  </span>
-                  Participez activement à la lutte pour les droits des animaux !
-                </h2>
-              </div>
-            </CardLayout>
-          </Link>
-        </GridSectionWrapper>
-        <section className="text-center">
-          <h2 className="text-4xl mb-6 uppercase font-bold">Nos actions</h2>
-          <p className="mb-6">
-            Nous militons pour l'association{" "}
-            <a
-              target="_blank"
-              className="underline"
-              href="https://www.anonymousforthevoiceless.org/"
-              rel="noreferrer"
-            >
-              Anonymous for the Voiceless
-            </a>{" "}
-            qui est spécialisée dans la sensibilisation du public dans les rues,
-            en formant des Cubes de la Vérité. Dans ces cubes, nous montrons sur
-            des écrans la réalité qu'endurent des milliards d'animaux chaque
-            année. Nous sensibilisons les passants en se basant sur ces images
-            et en tenant un discours antispéciste et abolitionniste envers
-            l'exploitation des animaux.
-          </p>
-          <CustomButton to="/rejoindre" type="secondary">
-            Rejoindre le mouvement
-          </CustomButton>
-        </section>
-      </PageMainLayout>
+      <main className="my-12 p-12 xl:p-20">
+        <HomeCard
+          image={PourquoiImage}
+          title="Pourquoi arrêter d'exploiter les animaux ?"
+          description={
+            <p className="mb-6">
+              Découvrez de multiples raisons pour lesquelles il est essentiel
+              d'arrêter d'exploiter les animaux. Enquêtes, films, et autres
+              ressources ... Découvrez toute la vérité.
+            </p>
+          }
+          actionButtonText="Découvrir"
+          actionButtonLink="/pourquoi"
+          customClasses="mb-40"
+        />
+        <HomeCard
+          image={CommentImage}
+          title="Comment ne plus exploiter les animaux ?"
+          type="left"
+          description={
+            <p className="mb-6">
+              Nous vous proposons un ensemble de ressources utiles pour vous
+              faciliter la transition vers le véganisme, avec de nombreux
+              conseils en alimentations ou en santé.
+            </p>
+          }
+          actionButtonText="Découvrir"
+          actionButtonLink="/comment"
+          customClasses="mb-40"
+        />
+        <HomeCard
+          image={AgirImage}
+          title="Venez militer pour les animaux"
+          type="right"
+          description={
+            <p className="mb-6">
+              Nous militons pour l'association{" "}
+              <a
+                target="_blank"
+                className="underline"
+                href="https://www.anonymousforthevoiceless.org/"
+                rel="noreferrer"
+              >
+                Anonymous for the Voiceless
+              </a>{" "}
+              qui est spécialisée dans la sensibilisation du public dans les
+              rues, en formant des Cubes de la Vérité. Dans ces cubes, nous
+              montrons sur des écrans la réalité qu'endurent des milliards
+              d'animaux chaque année. Nous sensibilisons les passants en se
+              basant sur ces images.
+            </p>
+          }
+          actionButtonText="Rejoindre le mouvement"
+          actionButtonLink="/rejoindre"
+        />
+      </main>
     </div>
   );
 };

@@ -72,20 +72,9 @@ const LinksPage = ({ title, fetchId, description }) => {
           )
         )}
         <div className="w-full sm:w-[560px] mt-4 lg:mt-0 lg:ml-4 lg:w-auto">
-          {link.fields.lien ? (
-            <a
-              href={link.fields.lien}
-              target="_blank"
-              rel="noreferrer"
-              className="text-2xl text-blue-600 mb-2 block"
-            >
-              {link.fields.titre}
-            </a>
-          ) : (
-            <p className="text-2xl text-blue-600 mb-2 block">
-              {link.fields.titre}
-            </p>
-          )}
+          <p className="text-2xl text-blue-600 mb-2 block">
+            {link.fields.titre}
+          </p>
 
           <p className="mb-6">{link.fields.description}</p>
           <div onClick={(e) => e.preventDefault()}>
@@ -146,7 +135,12 @@ const LinksPage = ({ title, fetchId, description }) => {
         links.map((link) => {
           if (link.fields.lien && !isYoutubeLink(link.fields.lien)) {
             return (
-              <a href={link.fields.lien} target="_blank" rel="noreferrer">
+              <a
+                key={link.sys.id}
+                href={link.fields.lien}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <LinkCardItem link={link} />
               </a>
             );
