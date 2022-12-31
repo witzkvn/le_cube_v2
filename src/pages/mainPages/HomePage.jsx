@@ -24,7 +24,7 @@ const HomePage = () => {
           <img src={HeaderImage} alt="le cube de la vérité" />
         </div>
       </header>
-      <main className="my-12 p-12 xl:p-20">
+      <main className="my-12 p-2 md:p-12 xl:p-20">
         <HomeCard
           image={PourquoiImage}
           title="Pourquoi arrêter d'exploiter les animaux ?"
@@ -32,7 +32,9 @@ const HomePage = () => {
             <p className="mb-6">
               Découvrez de multiples raisons pour lesquelles il est essentiel
               d'arrêter d'exploiter les animaux. Enquêtes, films, et autres
-              ressources ... Découvrez toute la vérité.
+              ressources ... Apprenez à découvrir ces êtres sensibles, et voyez
+              les pratiques que nous leur infligeons quotidiennement partout
+              dans le monde, y compris en France.
             </p>
           }
           actionButtonText="Découvrir"
@@ -45,9 +47,11 @@ const HomePage = () => {
           type="left"
           description={
             <p className="mb-6">
-              Nous vous proposons un ensemble de ressources utiles pour vous
-              faciliter la transition vers le véganisme, avec de nombreux
-              conseils en alimentations ou en santé.
+              Changer ses habitudes de consommation peut être un frein au
+              véganisme. C'est pourquoi nous avons regroupé un maximum de
+              ressources pour vous donner toutes les informations, les astuces
+              et les bons plans pour vous faciliter la transition vers le
+              véganisme.
             </p>
           }
           actionButtonText="Découvrir"

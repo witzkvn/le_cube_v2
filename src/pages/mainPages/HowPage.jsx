@@ -68,8 +68,8 @@ const HowPage = () => {
       </div>
       <GridSectionWrapper>
         {cards &&
-          cards.map((card) => (
-            <Link to={card.pathTo}>
+          cards.map((card, index) => (
+            <Link to={card.pathTo} key={index}>
               <CardLayout>
                 <div className="h-52 overflow-hidden">
                   <img

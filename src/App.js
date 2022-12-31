@@ -16,7 +16,7 @@ function App() {
     <div className="min-h-screen">
       <BrowserRouter>
         <Nav />
-        <div className="">
+        <div>
           <ScrollToTop>
             <Routes>
               <Route path="/" element={<HomePage />} />

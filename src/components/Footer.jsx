@@ -5,8 +5,8 @@ import CustomButton from "./CustomButton";
 const Footer = () => {
   return (
     <footer className="bg-black text-white p-6 mt-24 lg:text-left">
-      <div className="p-6 w-full lg:flex">
-        <div className="w-full mb-24 text-center lg:mr-12 lg:w-1/3 lg:mb-0 xl:mr-24">
+      <div className="p-6 w-full lg:flex lg:justify-center">
+        <div className="w-full mb-24 text-center lg:mr-24 lg:w-1/3 lg:mb-0 xl:mr-56">
           <h3 className="text-3xl mb-6">Rejoignez-nous</h3>
           <p className="mb-6">
             Nous sommes militants bénévoles pour l'association{" "}

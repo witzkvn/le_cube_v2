@@ -23,7 +23,7 @@ const HomeCard = ({
           />
         </div>
         <div className="lg:w-1/2 lg:ml-6 xl:1/2 xl:ml-12">
-          <div className="bg-white font-extrabold text-2xl tracking-widest uppercase xl:text-4xl xl:mb-12">
+          <div className="my-3 bg-white font-extrabold text-2xl tracking-widest uppercase lg:my-0 xl:text-4xl xl:mb-12">
             {title}
           </div>
           {description}
@@ -41,7 +41,7 @@ const HomeCard = ({
         className={`${customClasses} text-center flex flex-col lg:flex-row lg:text-right`}
       >
         <div className="lg:w-1/2 lg:mr-6 xl:1/2 xl:mr-12">
-          <div className="bg-white font-extrabold text-2xl tracking-widest uppercase xl:text-4xl xl:mb-12">
+          <div className="my-3 bg-white font-extrabold text-2xl tracking-widest uppercase xl:text-4xl lg:my-0 xl:mb-12">
             {title}
           </div>
           {description}

@@ -6,12 +6,11 @@ const VideoPreview = ({ url }) => {
     return (
       <div className="w-full">
         <iframe
-          className="w-full mx-auto min-h-[250px] sm:w-[560px] sm:h-[315px]"
+          className="w-full mx-auto min-h-[300px]"
           src={url.replace("watch?v=", "embed/")}
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
     );
@@ -23,7 +22,7 @@ const VideoPreview = ({ url }) => {
       rel="noreferrer"
       className="underline underline-offset-8"
     >
-      {url}
+      Voir la ressource
     </a>
   );
 };

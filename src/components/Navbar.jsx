@@ -56,15 +56,6 @@ const Nav = () => {
         className="p-1 font-normal text-white hover:text-orange-600"
         onClick={() => setOpenNav(false)}
       >
-        <NavLink to={"/rejoindre"} className={`${getActiveLinkClass("/agir")}`}>
-          Agir
-        </NavLink>
-      </Typography>
-      <Typography
-        as="li"
-        className="p-1 font-normal text-white hover:text-orange-600"
-        onClick={() => setOpenNav(false)}
-      >
         <NavLink
           to={"/veggie-challenge"}
           className={`${getActiveLinkClass("/veggie-challenge")}`}
@@ -89,11 +80,11 @@ const Nav = () => {
         </NavLink>
         <div className="hidden lg:block">{navList}</div>
         <NavLink
-          to={"/contact"}
+          to={"/rejoindre"}
           className="hidden lg:inline-block"
           onClick={() => setOpenNav(false)}
         >
-          <CustomButton>Contact</CustomButton>
+          <CustomButton>Agir</CustomButton>
         </NavLink>
         <IconButton
           variant="text"
@@ -135,10 +126,8 @@ const Nav = () => {
       </div>
       <MobileNav open={openNav}>
         {navList}
-        <NavLink to={"/contact"} onClick={() => setOpenNav(false)}>
-          <CustomButton customClasses={"!block text-center"}>
-            Contact
-          </CustomButton>
+        <NavLink to={"/rejoindre"} onClick={() => setOpenNav(false)}>
+          <CustomButton customClasses={"!block text-center"}>Agir</CustomButton>
         </NavLink>
       </MobileNav>
     </Navbar>
