@@ -58,16 +58,14 @@ const JoinPage = () => {
             carte interactive. En cliquant dessus, vous obtiendrez les liens de
             contact avec cette antenne.
           </p>
-          <div>
+          <div className="max-w-4xl mx-auto">
             <iframe
-              className="mx-auto"
+              className="w-full min-h-[480px]"
               title="join-us"
               src="https://www.google.com/maps/d/embed?mid=17Y1nr0AHYZN7oZjFRo2EHupgEek&ehbc=2E312F"
-              width="640"
-              height="480"
             ></iframe>
           </div>
-          <p className="mt-12 uppercase text-3xl font-bold underline underline-offset-8">
+          <p className="mt-12 uppercase text-3xl font-bold">
             Votre action est majeure
           </p>
         </div>

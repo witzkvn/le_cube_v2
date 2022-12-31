@@ -39,7 +39,7 @@ const HomePage = () => {
           }
           actionButtonText="Découvrir"
           actionButtonLink="/pourquoi"
-          customClasses="mb-40"
+          customClasses="mb-16 lg:mb-40"
         />
         <HomeCard
           image={CommentImage}
@@ -56,7 +56,7 @@ const HomePage = () => {
           }
           actionButtonText="Découvrir"
           actionButtonLink="/comment"
-          customClasses="mb-40"
+          customClasses="mb-16 lg:mb-40"
         />
         <HomeCard
           image={AgirImage}
