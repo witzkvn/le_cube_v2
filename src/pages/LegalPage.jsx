@@ -1,8 +1,9 @@
 import React from "react";
+import PageMainLayout from "../layout/PageMainLayout";
 
 const LegalPage = () => {
   return (
-    <div>
+    <PageMainLayout>
       <h1 className="mb-12 text-center text-4xl">Mentions légales</h1>
       <h2 className="text-2xl mb-4">
         Le site le-cube.info est édité à titre personnel, il n'appartient pas à
@@ -26,7 +27,7 @@ const LegalPage = () => {
       <p>neoDomaine.com</p>
       <p>36 rue St Cléophas - 34070 - Montpellier FRANCE</p>
       <p>Contact : contact@neodomaine.com</p>
-    </div>
+    </PageMainLayout>
   );
 };
 
