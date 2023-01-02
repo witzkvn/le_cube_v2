@@ -6,7 +6,7 @@ const CustomButton = ({ to, customClasses, type = "primary", children }) => {
     return (
       <Link
         to={to}
-        className={`border  uppercase font-bold py-2 px-6 rounded-md inline-block ${
+        className={`border uppercase font-bold py-2 px-6 rounded-md inline-block transition-all ease-in duration-100 ${
           type === "secondary"
             ? "border-black text-black hover:bg-black hover:text-white"
             : "border-white text-white hover:bg-white hover:text-black"
@@ -19,7 +19,7 @@ const CustomButton = ({ to, customClasses, type = "primary", children }) => {
 
   return (
     <div
-      className={`border  uppercase font-bold py-2 px-6 rounded-md inline-block ${
+      className={`border uppercase font-bold py-2 px-6 rounded-md inline-block transition-all ease-in duration-100 ${
         type === "secondary"
           ? "border-black text-black hover:bg-black hover:text-white"
           : "border-white text-white hover:bg-white hover:text-black"

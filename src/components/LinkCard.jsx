@@ -6,18 +6,19 @@ import VideoPreview from "./VideoPreview";
 
 const LinkCard = ({ link, key }) => {
   return (
-    <CardLayout key={key} customClasses="border mb-12 md:mb-20 p-4 md:p-8">
+    <CardLayout key={key} customClasses="border mb-12 md:mb-20 ">
       <a
         key={link.sys.id}
         href={link.fields.lien}
         target="_blank"
         rel="noreferrer"
+        className="flex-1 p-4 md:p-8"
       >
         <h2 className="text-2xl md:text-3xl text-blue-600 mb-4 font-bold">
           {link.fields.titre}
         </h2>
-        <div className="mb-6 flex flex-col lg:flex-row">
-          <div className="flex items-center mb-6 lg:mb-0 lg:w-1/2">
+        <div className="mb-6 flex flex-col">
+          <div className="flex items-center mb-6">
             {link.fields.lien &&
             isYoutubeLink(link.fields.lien) &&
             !link.fields.image?.fields.file.url ? (
@@ -32,13 +33,11 @@ const LinkCard = ({ link, key }) => {
               )
             )}
           </div>
-          <p className="md:text-left lg:w-1/2 md:ml-4">
-            {link.fields.description}
-          </p>
+          <p className="md:text-left">{link.fields.description}</p>
         </div>
       </a>
       {link.fields.lien2 && (
-        <div className="border-t pt-4">
+        <div className="border-t p-4 md:p-8 break-all text-sm text-left">
           <p className="mb-2">Autres liens :</p>
           <a
             href={link.fields.lien2}
@@ -54,7 +53,7 @@ const LinkCard = ({ link, key }) => {
               href={link.fields.lien3}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-500 block"
+              className="text-gray-500 block mt-2"
               onClick={(e) => e.stopPropagation()}
             >
               {link.fields.lien3}

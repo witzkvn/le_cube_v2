@@ -61,12 +61,14 @@ const LinksPage = ({ title, fetchId, description }) => {
         <h1 className="font-oswald text-4xl mb-24">{title}</h1>
         {description && description}
       </div>
-      {links &&
-        links.map((link) => (
-          <div key={link.sys.id}>
-            <LinkCard link={link} />
-          </div>
-        ))}
+      <section className="grid grid-col-1 gap-12 max-w-max mx-auto mb-24 lg:grid-cols-2">
+        {links &&
+          links.map((link) => (
+            <div key={link.sys.id}>
+              <LinkCard link={link} />
+            </div>
+          ))}
+      </section>
     </PageMainLayout>
   );
 };
